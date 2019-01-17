@@ -53,7 +53,8 @@
 		<h5>No Quotes yet.</h5>	
 		{% else %}
 		 {% for article in user['Articles'] %}
-		 {{article['title']}}
+		 <br/>
+		<a class="btn-link" href="/read_quote/{{article['article_id']}}" style="background: rgba(100,0,0,0.2);font-style: italic;font-size: 19px; font-weight: bolder;">:-{{article['title']}}</a>
 		 {% endfor %}		
 		{% endif %}
 	</div>
@@ -62,6 +63,9 @@
 	</div>	
 	</div>
 </div>
+</div>
+<div class="row">
+	<a href="/all_quotes">See all quotes</a>
 </div>
 </div>
 </div>
